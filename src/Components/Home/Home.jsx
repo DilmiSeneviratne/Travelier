@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect}from 'react'
 import './home.css'
 import video from '../../assests/video1.mp4'
 import { GrLocation } from "react-icons/gr";
@@ -8,7 +8,14 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { FiFacebook } from "react-icons/fi";
 import { TbApps } from "react-icons/tb";
 import { BsListTask } from "react-icons/bs";
+
+import Aos from 'aos'
+import 'aos/dist/aps.css'
 const Home = () => {
+
+  useEffect(()=>{
+      Aosinit({duration:2000})
+  },[])
   return (
    <section className='home'>
     <div className="overlay"></div>
@@ -16,15 +23,15 @@ const Home = () => {
 
     <div className="homeContent container">
       <div className="textDiv">
-        <span className="smallText">
+        <span data-aos="fade-up" className="smallText">
           Our Packages
         </span>
-        <h1 className="homeTitle">
+        <h1 data-aos="fade-up" className="homeTitle">
           Search your holiday
         </h1>
       </div>
 
-      <div className="cardDiv grid">
+      <div data-aos="fade-up" className="cardDiv grid">
         <div className="destinationInput">
           <label htmlFor="city">Search your destination:</label>
           <div className="input flex">
@@ -56,7 +63,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="homeFooterIcons flex">
+      <div data-aos="fade-up" className="homeFooterIcons flex">
         <div className="rightIcons">
           <FiFacebook className="icon" />
           <AiOutlineInstagram className="icon"/> 

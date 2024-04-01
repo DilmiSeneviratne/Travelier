@@ -13,7 +13,7 @@ import img8 from '../../assests/img8.jpg'
 import img9 from '../../assests/img9.jpg'
 
 import Aos from 'aos'
-import 'aos/dist/aps.css'
+import 'aos/dist/aos.css'
 
 const Data = [
   {
@@ -110,7 +110,7 @@ const Data = [
 const Main = () => {
 
   useEffect(()=>{
-    Aosinit({duration:2000})
+    Aos.init({duration:2000})
 },[])
 
   return (
